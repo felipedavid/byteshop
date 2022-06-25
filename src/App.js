@@ -1,43 +1,36 @@
+import Directory from './components/directory/directory.component'
 
 const App = () => {
+  const categories = [
+    {
+      id: 1,
+      title: "GPUs",
+      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
+    },
+    {
+      id: 2,
+      title: "CPUs",
+      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
+    },
+    {
+      id: 3,
+      title: "Memory",
+      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
+    },
+    {
+      id: 4,
+      title: "Cases",
+      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
+    },
+    {
+      id: 5,
+      title: "Other",
+      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
+    },
+  ];
+
   return (
-    <div class="categories-container">
-      <div class="category-container">
-        <img />
-        <div class="category-body-container">
-          <h2>GPUs</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div class="category-container">
-        <img />
-        <div class="category-body-container">
-          <h2>CPUs</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div class="category-container">
-        <img />
-        <div class="category-body-container">
-          <h2>Memories</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div class="category-container">
-        <img />
-        <div class="category-body-container">
-          <h2>Cooling</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-      <div class="category-container">
-        <img />
-        <div class="category-body-container">
-          <h2>Others</h2>
-          <p>Shop Now</p>
-        </div>
-      </div>
-    </div>
+    <Directory categories={categories}/>
   );
 }
 
