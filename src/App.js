@@ -1,36 +1,22 @@
-import Directory from './components/directory/directory.component'
+import {Routes, Route} from 'react-router-dom';
+
+import Home from './routes/home/home.component'
+import Navigation from './routes/navigation/navigation.component'
+import SignIn from './routes/sign-in/sign-in.component'
+
+const Shop = () => {
+  return <h1>I am the shop page</h1>
+}
 
 const App = () => {
-  const categories = [
-    {
-      id: 1,
-      title: "GPUs",
-      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
-    },
-    {
-      id: 2,
-      title: "CPUs",
-      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
-    },
-    {
-      id: 3,
-      title: "Memory",
-      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
-    },
-    {
-      id: 4,
-      title: "Cases",
-      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
-    },
-    {
-      id: 5,
-      title: "Other",
-      imageUrl: "https://cdn.dooca.store/107/products/dx6hr51rghkvbxr5tuw5zotjjjybw6km610b_1600x1600+fill_ffffff.png"
-    },
-  ];
-
   return (
-    <Directory categories={categories}/>
+    <Routes>
+      <Route path="/" element={<Navigation />}>
+        <Route index element={<Home />}/>
+        <Route path="shop" element={<Shop />}/>
+        <Route path="sign-in" element={<SignIn />}/>
+      </Route>
+    </Routes>
   );
 }
 
